@@ -63,8 +63,11 @@ Bước 2: Cài đặt Ubuntu
 
 <img width="1315" height="354" alt="image" src="https://github.com/user-attachments/assets/f1795bba-3216-4cc8-a6e4-6a4afa1f370f" />
 
+3. Cấu hình mạng trong Ubuntu
 
+a) Lấy IP Ubuntu
 
+- Sử dụng lệnh `ip -4 addr `
 
 
 
