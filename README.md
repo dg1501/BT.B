@@ -43,6 +43,28 @@ Cấu hình:
 
 <img width="877" height="666" alt="{6EF261FD-0BD7-420B-92D2-DEB2E1DEFCBF}" src="https://github.com/user-attachments/assets/a0e9490c-0db3-418a-a6fe-86f0688a5405" /></P>
 
+Bước 2: Cài đặt Ubuntu
+
+<img width="741" height="344" alt="image" src="https://github.com/user-attachments/assets/6cd38ff6-3d5c-4455-a58c-1e70266962ae" /></p>
+
+- Chọn Try or Install Ubuntu Server và nhấn Enter
+
+<img width="1279" height="846" alt="image" src="https://github.com/user-attachments/assets/fff84232-a1ce-4924-aad2-82cf9b615587" /></p>
+
+- Chọn ngôn ngữ
+
+<img width="1133" height="539" alt="image" src="https://github.com/user-attachments/assets/cd806f78-a2e7-478b-bf4a-dd76207afa7f" /></p>
+
+- Tích vào ô Install OpenSSH server
+-  
+<img width="1031" height="308" alt="image" src="https://github.com/user-attachments/assets/b7f26205-b22b-45c0-afbf-7d7a87bac43e" /></p>
+
+### SAU KHI THỰC HIỆN 1 LOẠT CÁC THAO TÁC HOẠT ĐỘNG TA ĐƯỢC GIAO DIỆN UBUNTU NHƯ HÌNH DƯỚI
+
+<img width="1315" height="354" alt="image" src="https://github.com/user-attachments/assets/f1795bba-3216-4cc8-a6e4-6a4afa1f370f" />
+
+
+
 
 
 
