@@ -37,13 +37,39 @@ Cấu hình:
 - ***Name***: Ubuntu
 - ***Specify Generation***: Chọn Generation 2 (Bắt buộc để hỗ trợ tốt nhất cho Ubuntu mới).
 - ***Assign Memory***: Nhập 2048 MB (2GB). Nên tích chọn Use Dynamic Memory
-- ***Configure Networking***: Chọn Default Switch (để máy ảo có internet)
+- ***Configure Networking***: Tạm chọn Default Switch (để máy ảo có internet)
 - ***Connect Virtual Hard Disk***: Để mặc định (thường là 127GB, nhưng nó sẽ chỉ chiếm dung lượng thực tế dùng).
 - ***Installation Options***: Chọn dòng Install an operating system from a bootable image file, sau đó nhấn **Browse** và chọn file ISO Ubuntu đã tải
 
 <img width="877" height="666" alt="{6EF261FD-0BD7-420B-92D2-DEB2E1DEFCBF}" src="https://github.com/user-attachments/assets/a0e9490c-0db3-418a-a6fe-86f0688a5405" /></P>
 
-Bước 2: Cài đặt Ubuntu
+Bước 2: Cấu hình mạng (Quan trọng nhất)
+
+- Nếu để **Default Switch** → KHÔNG SSH được từ Windows
+
+- Phải tạo External Switch.
+
+- Trong Hyper - V: `Virtual Switch Manager → New → External`
+
+<img width="1156" height="504" alt="{985846F6-C9E5-4CF8-A5CF-5B65A7713240}" src="https://github.com/user-attachments/assets/06c2cbaa-2060-4c5a-a536-32d9a428a64d" /></p>
+
+- Chọn card mạng thật (WiFi hoặc Ethernet)
+  
+- Name: ExternalSwitch
+  
+- Tick: Allow management OS to share this network
+
+<img width="709" height="508" alt="{E989B2F3-EA47-42F8-B7EF-3F27423D1048}" src="https://github.com/user-attachments/assets/bf6883f1-ba6b-43b0-8fc6-8decc9e63136" /></p>
+
+Bước 3: Gán switch cho VM
+
+- VM → Settings → Network Adapter
+  
+- Chọn: **ExternalSwitch**
+
+<img width="840" height="340" alt="{3128303B-7AB8-48AF-BBE9-691078C80BDC}" src="https://github.com/user-attachments/assets/9f10bc34-9847-400c-8925-2cd83e3e9cde" /></p>
+
+Bước 4: Cài đặt Ubuntu
 
 <img width="741" height="344" alt="image" src="https://github.com/user-attachments/assets/6cd38ff6-3d5c-4455-a58c-1e70266962ae" /></p>
 
