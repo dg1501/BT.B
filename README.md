@@ -1,6 +1,6 @@
-## B. CÀI ĐẶT UBUNTU + DOCKER
+<img width="897" height="607" alt="{B5AA5D88-B4F7-478A-B91F-1CB5A47FA764}" src="https://github.com/user-attachments/assets/14cb17f8-96e1-4add-9da0-c3fdab7acad5" /># B. CÀI ĐẶT UBUNTU + DOCKER
 
-### 1. Cài đặt hệ điều hành Ubuntu 24.04.4 LTS
+### 1. CÀI ĐẶT HỆ ĐIỀU HÀNH UBUNTU 24.04.4 LTS
 
 a) Kiểm tra Hyper - V
 
@@ -16,7 +16,7 @@ Tích:
 
 <img width="557" height="489" alt="{7C498F6A-92DF-4512-B451-D9107AC15513}" src="https://github.com/user-attachments/assets/7b877366-876e-4b82-aa20-491f13771e05" /></P>
 
-### 2. Tải Ubuntu trên Hyper - V
+### 2. TẢI UBUNTU TRÊN HYPER-V
 
 a) Dowload Ubuntu
 
@@ -89,7 +89,7 @@ Bước 4: Cài đặt Ubuntu
 
 <img width="1315" height="354" alt="image" src="https://github.com/user-attachments/assets/f1795bba-3216-4cc8-a6e4-6a4afa1f370f" />
 
-### 3. Cấu hình mạng trong Ubuntu
+### 3. CẤU HÌNH MẠNG TRONG UBUNTU
 
 a) Lấy IP Ubuntu
 
@@ -107,7 +107,7 @@ b) SSH từ Windows
 
 <img width="1124" height="650" alt="{81F1EFFC-AC63-4935-A0B8-EC60F564D40F}" src="https://github.com/user-attachments/assets/9091c104-f749-48c1-8637-e62225ae9435" /></p>
 
-### 4. Tìm hiểu các lệnh cơ bản của ubuntu
+### 4. TÌM HIỂU CÁC LỆNH CƠ BẢN CỦA UBUNTU
 
 🎯 Mục tiêu
 Tìm hiểu và thực hành các lệnh cơ bản trong Ubuntu để:
@@ -161,4 +161,72 @@ Tìm hiểu và thực hành các lệnh cơ bản trong Ubuntu để:
 
 <img width="881" height="516" alt="{4C029A4A-3C70-45D8-AF8B-CBDDCCA12751}" src="https://github.com/user-attachments/assets/1bb2273b-c156-4b2b-8e27-6583c65a9ce4" /></p>
 
+#### 6️⃣ Lệnh nano - Chỉnh sửa file
+
+- Mở file để chỉnh sửa nội dung.
+
+`sudo nano tenfile`
+
+⌨️ Phím tắt trong nano
+- Phím	Chức năng
+- Ctrl + O	Lưu file
+- Ctrl + X	Thoát
+
+<img width="1106" height="649" alt="{A426DE10-C6D0-4D84-B23B-BAD808E6D6C9}" src="https://github.com/user-attachments/assets/5542674c-b541-46bf-837f-4301abac9360" /></p>
+
+#### 7️⃣ Lệnh ip -4 addr - Xem địa chỉ IP
+
+- Hiển thị địa chỉ IP của máy Ubuntu.
+
+`ip -4 addr`
+
+<img width="859" height="163" alt="image" src="https://github.com/user-attachments/assets/d6c7b90c-f6f3-4216-86de-b26eb5debcfc" /></p>
+
+### 5. CÀI ĐẶT DOCKER CHO UBUNTU
+
+- Docker là nền tảng giúp đóng gói ứng dụng và các thành phần phụ thuộc vào một container, giúp chạy ứng dụng nhất quán trên nhiều môi trường khác nhau.
+
+🚀 Bước 1: Cập nhật hệ thống
+
+`sudo apt update`
+
+`sudo apt upgrade -y`
+
+<img width="696" height="279" alt="{1E903455-A871-4A16-9180-7797AD501A30}" src="https://github.com/user-attachments/assets/d613c7c5-2d8f-4e4d-ac05-aa3e79529beb" /></p>
+
+🚀 Bước 2: Cài các gói cần thiết
+
+`sudo apt install -y ca-certificates curl gnupg`
+
+🚀 Bước 3: Cài Docker
+
+`curl -fsSL https://get.docker.com | sh`
+
+<img width="847" height="806" alt="{94F87DE7-E2B0-4FF5-9545-7D460260E8E3}" src="https://github.com/user-attachments/assets/bd0b1bc5-bfc0-4f9a-8cab-903765542ed2" /></p>
+
+### 6. Kiểm tra phiên bản docker vừa cài đặt, kiểm tra phiên bản của docker compose
+
+<img width="821" height="231" alt="{262B0163-0449-4F54-A446-459DD89EC322}" src="https://github.com/user-attachments/assets/5d02e8d5-586a-4291-af5d-0676a6d9102b" /></p>
+
+📖 Giải thích
+`docker --version`: kiểm tra phiên bản Docker Engine</p>
+
+`docker compose version`: kiểm tra Docker Compose (dùng để chạy nhiều container)</p>
+
+### 7. Cấu hình để docker chạy mà không cần tiền tố sudo
+
+📖 Lý thuyết
+
+- Mặc định Docker cần quyền root (sudo).</p>
+
+- Ta thêm user vào nhóm docker để chạy bình thường.</p>
+
+`sudo usermod -aG docker $USER`
+`newgrp docker`
+
+- Kiểm tra</p>
+
+`docker run hello-world`
+
+<img width="897" height="607" alt="{B5AA5D88-B4F7-478A-B91F-1CB5A47FA764}" src="https://github.com/user-attachments/assets/2d1d24f0-1386-4278-a421-6c0d9a8f75f7" /></p>
 
