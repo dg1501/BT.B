@@ -1,4 +1,4 @@
-<img width="897" height="607" alt="{B5AA5D88-B4F7-478A-B91F-1CB5A47FA764}" src="https://github.com/user-attachments/assets/14cb17f8-96e1-4add-9da0-c3fdab7acad5" /># B. CÀI ĐẶT UBUNTU + DOCKER
+# B. CÀI ĐẶT UBUNTU + DOCKER
 
 ### 1. CÀI ĐẶT HỆ ĐIỀU HÀNH UBUNTU 24.04.4 LTS
 
@@ -230,3 +230,219 @@ Tìm hiểu và thực hành các lệnh cơ bản trong Ubuntu để:
 
 <img width="897" height="607" alt="{B5AA5D88-B4F7-478A-B91F-1CB5A47FA764}" src="https://github.com/user-attachments/assets/2d1d24f0-1386-4278-a421-6c0d9a8f75f7" /></p>
 
+### 8. Tìm hiểu tập lệnh của docker và docker compose
+
+📖 1. Tổng quan về Docker
+
+- Docker là nền tảng giúp đóng gói ứng dụng vào các **container**.
+  
+- Container là môi trường chạy nhẹ, nhanh và độc lập, giúp ứng dụng chạy giống nhau trên mọi hệ thống.
+
+Thành phần chính:
+
+- **Image**: khuôn mẫu (template) để tạo container
+  
+- **Container**: môi trường chạy ứng dụng
+  
+- **Docker Engine**: hệ thống quản lý container
+
+---
+
+⚙️ 2. Các lệnh Docker cơ bản
+
+---
+
+🔹 2.1 `docker --version` – Kiểm tra phiên bản
+
+`docker --version`
+
+---
+
+🔹 2.2 docker ps – Xem container đang chạy
+
+👉 Hiển thị các container đang hoạt động.
+
+`docker ps`
+
+---
+
+🔹 2.3 docker ps -a – Xem tất cả container
+
+👉 Hiển thị cả container đã dừng.
+
+`docker ps -a`
+
+---
+
+🔹 2.4 docker images – Xem image
+
+👉 Liệt kê các image trong máy.
+
+`docker images`
+
+---
+
+🔹 2.5 docker pull – Tải image
+docker pull <image_name>
+
+📌 Ví dụ:
+
+`docker pull nginx`
+
+👉 Tải image từ Docker Hub.
+
+---
+
+🔹 2.6 docker run – Chạy container
+docker run [OPTIONS] IMAGE
+
+📌 Ví dụ:
+
+`docker run -d -p 8080:80 nginx`
+
+👉 Giải thích:
+
+-d: chạy nền
+-p: ánh xạ cổng
+
+---
+
+🔹 2.7 docker stop – Dừng container
+`docker stop <container_id>`
+
+👉 Dừng container đang chạy.
+
+---
+
+🔹 2.8 docker rm – Xóa container
+`docker rm <container_id>`
+
+👉 Xóa container.
+
+---
+
+🔹 2.9 docker rmi – Xóa image
+`docker rmi <image_id>`
+
+👉 Xóa image khỏi hệ thống.
+
+---
+
+🔹 2.10 docker logs – Xem log
+`docker logs <container_id>`
+
+👉 Hiển thị log hoạt động.
+
+---
+
+🔹 2.11 docker exec – Chạy lệnh trong container
+`docker exec -it <container_id> bash`
+
+👉 Truy cập vào container đang chạy.
+
+---
+
+🔹 2.12 docker run hello-world – Kiểm tra Docker
+`docker run hello-world`
+
+👉 Kiểm tra Docker hoạt động.
+
+⚙️ 3. Docker Compose
+
+---
+
+📖 3.1 Lý thuyết
+
+- Docker Compose giúp chạy nhiều container bằng file YAML thay vì chạy từng lệnh riêng lẻ.
+
+📄 3.2 Cấu trúc file compose
+
+`services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+`
+
+👉 Định nghĩa container cần chạy.
+
+---
+
+⚙️ 4. Các lệnh Docker Compose
+
+---
+
+🔹 4.1 docker compose version – Kiểm tra
+`docker compose version`
+
+👉 Kiểm tra Compose đã cài.
+
+---
+
+🔹 4.2 docker compose up – Chạy service
+`docker compose up`
+
+👉 Khởi chạy container.
+
+---
+
+🔹 4.3 docker compose up -d – Chạy nền
+`docker compose up -d`
+
+👉 Chạy container ở background.
+
+---
+
+🔹 4.4 docker compose down – Dừng và xóa
+`docker compose down`
+
+👉 Dừng toàn bộ container.
+
+---
+
+🔹 4.5 docker compose ps – Xem trạng thái
+`docker compose ps`
+
+👉 Xem container đang chạy.
+
+---
+
+🔹 4.6 docker compose logs – Xem log
+`docker compose logs`
+
+👉 Hiển thị log.
+
+---
+
+🔹 4.7 docker compose build – Build lại
+`docker compose build`
+
+👉 Build lại image.
+
+### 9. Đảm bảo tường lửa trên Ubuntu đã cho phép các cổng 80, 1880, 9630 (Lệnh: sudo ufw allow ...)
+
+Bước 1: Cài ufw
+
+`sudo apt install ufw -y`
+
+<img width="527" height="169" alt="{08955029-13BD-47C0-BC65-091D7AA11881}" src="https://github.com/user-attachments/assets/1a614986-d2cf-47b7-9079-c78c030d1126" /></p>
+
+Bước 2: Mở các port
+
+<img width="646" height="356" alt="{FE68C9C6-841F-44D6-9066-8823E8E81813}" src="https://github.com/user-attachments/assets/2a7dcf8e-b8b9-406c-a29e-a8374af40385" /></p>
+
+Bước 3: Cho phép SSH
+
+`sudo ufw allow ssh`
+
+<img width="534" height="155" alt="{DFB1FFCC-A68C-4BDA-9F4A-EB2BE580F3E0}" src="https://github.com/user-attachments/assets/2bec7120-469b-49d6-8dec-64422bb47913" />
+
+Bước 4: Bật FireWall
+
+`sudo ufw enable`
+
+Bước 5: Kiểm tra 
+
+`sudo ufw status`
+
+<img width="444" height="275" alt="{78047AEA-2B4D-4C6D-A36C-2C3F1966ED42}" src="https://github.com/user-attachments/assets/90cbad01-8de8-4b4a-8f2f-1e578cf230fc" /></P>
